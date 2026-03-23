@@ -44,3 +44,12 @@ jobs:
       with:
         name: RPK (Design Width 432) (RW5)
         path: dist/**/*.rpk
+    
+    - name: Build project (s5)
+      run: python scripts/build_s5.py
+
+    - name: Upload rpk file (s5)
+      uses: actions/upload-artifact@v4.3.6
+      with:
+        name: RPK (Design Width 480) (S5)
+        path: dist/**/*.rpk
